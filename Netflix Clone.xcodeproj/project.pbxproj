@@ -22,6 +22,8 @@
 		0A6209C02734618C00A88D71 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6209BF2734618C00A88D71 /* SearchViewController.swift */; };
 		0A6209C2273461A800A88D71 /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6209C1273461A800A88D71 /* DownloadsViewController.swift */; };
 		0A6291FA2756F1B900082232 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6291F92756F1B900082232 /* HeroHeaderUIView.swift */; };
+		0A7C94D527764E8C0072AE85 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7C94D427764E8C0072AE85 /* TitleTableViewCell.swift */; };
+		0A7C94D72776507A0072AE85 /* TitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7C94D62776507A0072AE85 /* TitleViewModel.swift */; };
 		0AD9A100276047A900131EEF /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD9A0FF276047A900131EEF /* APICaller.swift */; };
 		0AD9A10427604E4D00131EEF /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD9A10327604E4D00131EEF /* Title.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +44,8 @@
 		0A6209BF2734618C00A88D71 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0A6209C1273461A800A88D71 /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
 		0A6291F92756F1B900082232 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
+		0A7C94D427764E8C0072AE85 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
+		0A7C94D62776507A0072AE85 /* TitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModel.swift; sourceTree = "<group>"; };
 		0AD9A0FF276047A900131EEF /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		0AD9A10327604E4D00131EEF /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +69,7 @@
 				0A1942CF274A620100B3FA93 /* CollectionViewTableViewCell.swift */,
 				0A6291F92756F1B900082232 /* HeroHeaderUIView.swift */,
 				0A5AAAA6276AE1D500149719 /* TitleCollectionViewCell.swift */,
+				0A7C94D427764E8C0072AE85 /* TitleTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -72,6 +77,7 @@
 		0A1942CB274A619B00B3FA93 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				0A7C94D62776507A0072AE85 /* TitleViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -223,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A7C94D527764E8C0072AE85 /* TitleTableViewCell.swift in Sources */,
 				0A6209C02734618C00A88D71 /* SearchViewController.swift in Sources */,
 				0A5AAAA7276AE1D500149719 /* TitleCollectionViewCell.swift in Sources */,
 				0A6209AB2734603E00A88D71 /* MainTabBarViewController.swift in Sources */,
@@ -236,6 +243,7 @@
 				0A6209BE2734617600A88D71 /* UpcomingViewController.swift in Sources */,
 				0AD9A10427604E4D00131EEF /* Title.swift in Sources */,
 				0A6209BC2734615B00A88D71 /* HomeViewController.swift in Sources */,
+				0A7C94D72776507A0072AE85 /* TitleViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
