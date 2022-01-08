@@ -28,6 +28,8 @@
 		0AD9A100276047A900131EEF /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD9A0FF276047A900131EEF /* APICaller.swift */; };
 		0AD9A10427604E4D00131EEF /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD9A10327604E4D00131EEF /* Title.swift */; };
 		0AE30378277F600E00CBC18F /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE30377277F600E00CBC18F /* SearchResultsViewController.swift */; };
+		0AF8A46B2787BC2100FFE877 /* TitlePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8A46A2787BC2100FFE877 /* TitlePreviewViewController.swift */; };
+		0AF8A46D2787BEA400FFE877 /* TitlePreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8A46C2787BEA400FFE877 /* TitlePreviewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		0AD9A0FF276047A900131EEF /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		0AD9A10327604E4D00131EEF /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		0AE30377277F600E00CBC18F /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		0AF8A46A2787BC2100FFE877 /* TitlePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewController.swift; sourceTree = "<group>"; };
+		0AF8A46C2787BEA400FFE877 /* TitlePreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				0A7C94D62776507A0072AE85 /* TitleViewModel.swift */,
+				0AF8A46C2787BEA400FFE877 /* TitlePreviewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -99,6 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				0A5AAA9C2769057B00149719 /* Extensions.swift */,
+				0A6209A62734603E00A88D71 /* AppDelegate.swift */,
+				0A6209A82734603E00A88D71 /* SceneDelegate.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -136,8 +143,6 @@
 				0A1942CA274A619400B3FA93 /* Views */,
 				0A1942CB274A619B00B3FA93 /* ViewModels */,
 				0A6209BA2734614400A88D71 /* Controllers */,
-				0A6209A62734603E00A88D71 /* AppDelegate.swift */,
-				0A6209A82734603E00A88D71 /* SceneDelegate.swift */,
 				0A6209AF2734603E00A88D71 /* Assets.xcassets */,
 				0A6209B12734603E00A88D71 /* LaunchScreen.storyboard */,
 				0A6209B42734603E00A88D71 /* Info.plist */,
@@ -170,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				0AE30377277F600E00CBC18F /* SearchResultsViewController.swift */,
+				0AF8A46A2787BC2100FFE877 /* TitlePreviewViewController.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -264,7 +270,9 @@
 				0A5AAA9D2769057B00149719 /* Extensions.swift in Sources */,
 				0AD8A1BE2786FDB000612F1E /* YoutubeSearchResponse.swift in Sources */,
 				0A6209A92734603E00A88D71 /* SceneDelegate.swift in Sources */,
+				0AF8A46D2787BEA400FFE877 /* TitlePreviewViewModel.swift in Sources */,
 				0A6209BE2734617600A88D71 /* UpcomingViewController.swift in Sources */,
+				0AF8A46B2787BC2100FFE877 /* TitlePreviewViewController.swift in Sources */,
 				0AD9A10427604E4D00131EEF /* Title.swift in Sources */,
 				0A6209BC2734615B00A88D71 /* HomeViewController.swift in Sources */,
 				0A7C94D72776507A0072AE85 /* TitleViewModel.swift in Sources */,
