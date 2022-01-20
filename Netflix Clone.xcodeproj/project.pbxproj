@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0A1942D0274A620100B3FA93 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1942CF274A620100B3FA93 /* CollectionViewTableViewCell.swift */; };
+		0A28420C2799EBED0023560C /* NetflixCloneModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0A28420A2799EBED0023560C /* NetflixCloneModel.xcdatamodeld */; };
+		0A28420E2799EDB10023560C /* DataPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A28420D2799EDB10023560C /* DataPersistenceManager.swift */; };
 		0A5AAA9D2769057B00149719 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5AAA9C2769057B00149719 /* Extensions.swift */; };
 		0A5AAAA7276AE1D500149719 /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5AAAA6276AE1D500149719 /* TitleCollectionViewCell.swift */; };
 		0A5AAAAA276AE2E600149719 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0A5AAAA9276AE2E600149719 /* SDWebImage */; };
@@ -34,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		0A1942CF274A620100B3FA93 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		0A28420B2799EBED0023560C /* NetflixCloneModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NetflixCloneModel.xcdatamodel; sourceTree = "<group>"; };
+		0A28420D2799EDB10023560C /* DataPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceManager.swift; sourceTree = "<group>"; };
 		0A5AAA9C2769057B00149719 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0A5AAAA6276AE1D500149719 /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		0A6209A32734603E00A88D71 /* Netflix Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Netflix Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				0AD9A0FF276047A900131EEF /* APICaller.swift */,
+				0A28420D2799EDB10023560C /* DataPersistenceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 				0A6209AF2734603E00A88D71 /* Assets.xcassets */,
 				0A6209B12734603E00A88D71 /* LaunchScreen.storyboard */,
 				0A6209B42734603E00A88D71 /* Info.plist */,
+				0A28420A2799EBED0023560C /* NetflixCloneModel.xcdatamodeld */,
 			);
 			path = "Netflix Clone";
 			sourceTree = "<group>";
@@ -260,9 +266,11 @@
 				0A7C94D527764E8C0072AE85 /* TitleTableViewCell.swift in Sources */,
 				0A6209C02734618C00A88D71 /* SearchViewController.swift in Sources */,
 				0A5AAAA7276AE1D500149719 /* TitleCollectionViewCell.swift in Sources */,
+				0A28420E2799EDB10023560C /* DataPersistenceManager.swift in Sources */,
 				0A6209AB2734603E00A88D71 /* MainTabBarViewController.swift in Sources */,
 				0A1942D0274A620100B3FA93 /* CollectionViewTableViewCell.swift in Sources */,
 				0AD9A100276047A900131EEF /* APICaller.swift in Sources */,
+				0A28420C2799EBED0023560C /* NetflixCloneModel.xcdatamodeld in Sources */,
 				0A6291FA2756F1B900082232 /* HeroHeaderUIView.swift in Sources */,
 				0A6209C2273461A800A88D71 /* DownloadsViewController.swift in Sources */,
 				0A6209A72734603E00A88D71 /* AppDelegate.swift in Sources */,
@@ -509,6 +517,19 @@
 			productName = SDWebImageMapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		0A28420A2799EBED0023560C /* NetflixCloneModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0A28420B2799EBED0023560C /* NetflixCloneModel.xcdatamodel */,
+			);
+			currentVersion = 0A28420B2799EBED0023560C /* NetflixCloneModel.xcdatamodel */;
+			path = NetflixCloneModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0A62099B2734603D00A88D71 /* Project object */;
 }
