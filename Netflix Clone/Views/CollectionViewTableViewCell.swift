@@ -74,9 +74,7 @@ class CollectionViewTableViewCell: UITableViewCell {
         DataPersistenceManager.shared.deleteTitleBy(id: titles[indexPath.row].id) { result in
             switch result {
             case .success():
-                // reload downloads screen data
                 NotificationCenter.default.post(name: NSNotification.Name("downloaded"), object: nil)
-                // cell deki icon da burada güncellenebilir
             case .failure(let error):
                 print(error.localizedDescription)
             }
