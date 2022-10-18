@@ -16,6 +16,8 @@ class DataPersistenceManager {
         case failedToSaveData
         case failedToFetchData
         case failedToDeleteData
+        case failedToDeleteDataWith404
+        case failedToCheckDownloadedData
     }
     
     static let shared = DataPersistenceManager()
@@ -92,5 +94,58 @@ class DataPersistenceManager {
             completion(.failure(DatabasError.failedToDeleteData))
         }
         
+    }
+    
+    func deleteTitleBy(id: Int, completion: @escaping (Result<Void, Error>) -> Void) {
+        let fetchRequest: NSFetchRequest<TitleItem> = TitleItem.fetchRequest()
+        let predicate = NSPredicate(format: "(id = %@)", NSNumber(value: id))
+        fetchRequest.predicate = predicate
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let context = appDelegate.persistentContainer.viewContext
+        
+        do {
+            let result = try context.fetch(fetchRequest).first
+            
+            if let result = result {
+                context.delete(result)
+                
+                try context.save()
+                completion(.success(()))
+            }
+            
+            completion(.failure(DatabasError.failedToDeleteDataWith404))
+            
+        } catch {
+            completion(.failure(DatabasError.failedToDeleteData))
+        }
+    }
+    
+    func isDownloaded(_ id: Int, completion: @escaping (Result<Bool, Error>) -> Void) {
+        let fetchRequest: NSFetchRequest<TitleItem> = TitleItem.fetchRequest()
+        let predicate = NSPredicate(format: "(id = %@)", NSNumber(value: id))
+        fetchRequest.predicate = predicate
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let context = appDelegate.persistentContainer.viewContext
+        
+        do {
+            let result = try context.fetch(fetchRequest).first
+            
+            if let _ = result {
+                completion(.success(true))
+            } else {
+                completion(.success(false))
+            }
+            
+        } catch {
+            completion(.failure(DatabasError.failedToCheckDownloadedData))
+        }
     }
 }

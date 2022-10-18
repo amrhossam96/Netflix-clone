@@ -59,8 +59,6 @@ class TitlePreviewViewController: UIViewController {
         view.addSubview(downloadButton)
         
         configureConstraints()
-        
-        
     }
     
 
