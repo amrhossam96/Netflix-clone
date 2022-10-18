@@ -69,6 +69,17 @@ class CollectionViewTableViewCell: UITableViewCell {
         
 
     }
+    
+    private func removeTitleAt(indexPath: IndexPath) {
+        DataPersistenceManager.shared.deleteTitleBy(id: titles[indexPath.row].id) { result in
+            switch result {
+            case .success():
+                NotificationCenter.default.post(name: NSNotification.Name("downloaded"), object: nil)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
 }
 
 
@@ -123,21 +134,53 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
-        
-        let config = UIContextMenuConfiguration(
-            identifier: nil,
-            previewProvider: nil) {[weak self] _ in
-                let downloadAction = UIAction(title: "Download", subtitle: nil, image: nil, identifier: nil, discoverabilityTitle: nil, state: .off) { _ in
-                    self?.downloadTitleAt(indexPath: indexPath)
+        let config = UIContextMenuConfiguration(identifier: nil,
+                                                previewProvider: nil) { [weak self] _ in
+            
+            var action: UIAction?
+            
+            DataPersistenceManager.shared.isDownloaded(self?.titles[indexPath.row].id ?? 0) { result in
+                switch result {
+                case .success(let isDownloaded):
+                    if isDownloaded {
+                        action = UIAction(title: "Delete",
+                                                      subtitle: nil,
+                                                      image: nil,
+                                                      identifier: nil,
+                                                      discoverabilityTitle: nil,
+                                                      state: .off) { _ in
+                            self?.removeTitleAt(indexPath: indexPath)
+                        }
+                    } else {
+                            action = UIAction(title: "Download",
+                                                          subtitle: nil,
+                                                          image: nil,
+                                                          identifier: nil,
+                                                          discoverabilityTitle: nil,
+                                                          state: .off) { _ in
+                                self?.downloadTitleAt(indexPath: indexPath)
+                        }
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    action = UIAction(title: "Download",
+                                                  subtitle: nil,
+                                                  image: nil,
+                                                  identifier: nil,
+                                                  discoverabilityTitle: nil,
+                                                  state: .off) { _ in
+                        self?.downloadTitleAt(indexPath: indexPath)
+                    }
                 }
-                return UIMenu(title: "", image: nil, identifier: nil, options: .displayInline, children: [downloadAction])
             }
-        
+            return UIMenu(title: "",
+                          image: nil,
+                          identifier: nil,
+                          options: .displayInline,
+                          children: [action!])
+        }
         return config
     }
-    
-    
-
     
     
 }
