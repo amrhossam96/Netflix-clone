@@ -10,57 +10,44 @@ import WebKit
 
 class TitlePreviewViewController: UIViewController {
     
+
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var overviewLabel: UILabel!
+    @IBOutlet weak var downloadButton: UIButton! {
+        didSet {
+            downloadButton.layer.cornerRadius = 8
+            downloadButton.layer.masksToBounds = true
+        }
+    }
+    @IBOutlet weak var webView: WKWebView!
+
+//    private let downloadButton: UIButton = {
+//
+//        let button = UIButton()
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//        button.backgroundColor = .red
+//        button.setTitle("Download", for: .normal)
+//        button.setTitleColor(.white, for: .normal)
+//        button.layer.cornerRadius = 8
+//        button.layer.masksToBounds = true
+//
+//        return button
+//    }()
     
-    
-    private let titleLabel: UILabel = {
-       
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 22, weight: .bold)
-        label.text = "Harry potter"
-        return label
-    }()
-    
-    private let overviewLabel: UILabel = {
-       
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 18, weight: .regular)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.numberOfLines = 0
-        label.text = "This is the best movie ever to watch as a kid!"
-        return label
-    }()
-    
-    private let downloadButton: UIButton = {
-       
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .red
-        button.setTitle("Download", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = 8
-        button.layer.masksToBounds = true
-        
-        return button
-    }()
-    
-    private let webView: WKWebView = {
-        let webView = WKWebView()
-        webView.translatesAutoresizingMaskIntoConstraints = false
-        return webView
-    }()
+//    private let webView: WKWebView = {
+//        let webView = WKWebView()
+//        webView.translatesAutoresizingMaskIntoConstraints = false
+//        return webView
+//    }()
+
+    var viewModel: TitlePreviewViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
-        view.addSubview(webView)
-        view.addSubview(titleLabel)
-        view.addSubview(overviewLabel)
-        view.addSubview(downloadButton)
-        
-        configureConstraints()
-        
-        
+        //　ナビゲーションバーの背景色
+//        configureConstraints()
+        guard let viewModel = viewModel else { return }
+        configure(with: viewModel)
     }
     
 
@@ -101,6 +88,7 @@ class TitlePreviewViewController: UIViewController {
     
     public func configure(with model: TitlePreviewViewModel) {
         titleLabel.text = model.title
+        titleLabel.sizeToFit()
         overviewLabel.text = model.titleOverview
         
         guard let url = URL(string: "https://www.youtube.com/embed/\(model.youtubeView.id.videoId)") else {

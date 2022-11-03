@@ -63,13 +63,8 @@ class HomeViewController: UIViewController  {
                 print(erorr.localizedDescription)
             }
         }
-        
-
-
     }
 
-    
-    
     private func configureNavbar() {
         var image = UIImage(named: "netflixLogo")
         image = image?.withRenderingMode(.alwaysOriginal)
@@ -80,17 +75,13 @@ class HomeViewController: UIViewController  {
             UIBarButtonItem(image: UIImage(systemName: "play.rectangle"), style: .done, target: self, action: nil)
         ]
         navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.backgroundColor = .black
     }
-    
-    
-    
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         homeFeedTable.frame = view.bounds
     }
-
-
-    
 }
 
 
@@ -206,8 +197,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 extension HomeViewController: CollectionViewTableViewCellDelegate {
     func collectionViewTableViewCellDidTapCell(_ cell: CollectionViewTableViewCell, viewModel: TitlePreviewViewModel) {
         DispatchQueue.main.async { [weak self] in
-            let vc = TitlePreviewViewController()
-            vc.configure(with: viewModel)
+            //let vc = TitlePreviewViewController()
+            let storyboard = UIStoryboard(name: "TitlePreviewViewController", bundle: nil)
+            let vc = storyboard.instantiateInitialViewController() as! TitlePreviewViewController
+            vc.viewModel = viewModel
+            // vc.configure(with: viewModel)
             self?.navigationController?.pushViewController(vc, animated: true)
         }
     }

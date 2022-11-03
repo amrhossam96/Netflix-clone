@@ -32,6 +32,7 @@
 		0AE30378277F600E00CBC18F /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE30377277F600E00CBC18F /* SearchResultsViewController.swift */; };
 		0AF8A46B2787BC2100FFE877 /* TitlePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8A46A2787BC2100FFE877 /* TitlePreviewViewController.swift */; };
 		0AF8A46D2787BEA400FFE877 /* TitlePreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8A46C2787BEA400FFE877 /* TitlePreviewViewModel.swift */; };
+		71B111A62913E982000DD16C /* TitlePreviewViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71B111A52913E982000DD16C /* TitlePreviewViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		0AE30377277F600E00CBC18F /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		0AF8A46A2787BC2100FFE877 /* TitlePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewController.swift; sourceTree = "<group>"; };
 		0AF8A46C2787BEA400FFE877 /* TitlePreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewModel.swift; sourceTree = "<group>"; };
+		71B111A52913E982000DD16C /* TitlePreviewViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TitlePreviewViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 			children = (
 				0AE30377277F600E00CBC18F /* SearchResultsViewController.swift */,
 				0AF8A46A2787BC2100FFE877 /* TitlePreviewViewController.swift */,
+				71B111A52913E982000DD16C /* TitlePreviewViewController.storyboard */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71B111A62913E982000DD16C /* TitlePreviewViewController.storyboard in Resources */,
 				0A6209B32734603E00A88D71 /* LaunchScreen.storyboard in Resources */,
 				0A6209B02734603E00A88D71 /* Assets.xcassets in Resources */,
 			);

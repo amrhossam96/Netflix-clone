@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Title Preview View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="TitlePreviewViewController" customModule="Netflix_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="37N-sj-hXA">
+                                <rect key="frame" x="0.0" y="44" width="414" height="300"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="JAM-bL-VWw"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harry potter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="na9-ux-o2f">
+                                <rect key="frame" x="20" y="364" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOd-CR-bFN">
+                                <rect key="frame" x="20" y="400" width="374" height="64.5"/>
+                                <string key="text">This is the best movie ever to watch as a kid!This is the best movie ever to watch as a kid!This is the best movie ever to watch as a kid!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBB-TP-bvv">
+                                <rect key="frame" x="137" y="802" width="140" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="EzN-4F-43J"/>
+                                    <constraint firstAttribute="height" constant="40" id="tr0-7q-D18"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Download">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dBB-TP-bvv" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="4at-cE-Kwy"/>
+                            <constraint firstItem="UOd-CR-bFN" firstAttribute="top" secondItem="na9-ux-o2f" secondAttribute="bottom" constant="15" id="5fE-m2-VPO"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="dBB-TP-bvv" secondAttribute="bottom" constant="20" id="GJs-eI-EoN"/>
+                            <constraint firstItem="na9-ux-o2f" firstAttribute="top" secondItem="37N-sj-hXA" secondAttribute="bottom" constant="20" id="Gxf-xM-C89"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="37N-sj-hXA" secondAttribute="trailing" id="H2m-VK-b5n"/>
+                            <constraint firstItem="na9-ux-o2f" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="MNO-dQ-HDm"/>
+                            <constraint firstItem="37N-sj-hXA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Vjv-Jr-qsM"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="na9-ux-o2f" secondAttribute="trailing" constant="20" id="jJZ-ra-tdp"/>
+                            <constraint firstItem="37N-sj-hXA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="moU-jt-efX"/>
+                            <constraint firstAttribute="trailing" secondItem="UOd-CR-bFN" secondAttribute="trailing" constant="20" id="nJp-0L-hWm"/>
+                            <constraint firstItem="UOd-CR-bFN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="nV0-60-deC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="downloadButton" destination="dBB-TP-bvv" id="lfO-eO-Wtz"/>
+                        <outlet property="overviewLabel" destination="UOd-CR-bFN" id="xAg-j5-MXM"/>
+                        <outlet property="titleLabel" destination="na9-ux-o2f" id="IYc-oC-j9F"/>
+                        <outlet property="webView" destination="37N-sj-hXA" id="aDI-ez-hgR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31.884057971014496" y="91.741071428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
