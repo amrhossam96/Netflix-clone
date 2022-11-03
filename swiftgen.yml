@@ -1,0 +1,23 @@
+# strings:
+#   inputs: Netflix-clone/Base.lproj/Localizable.strings
+#   outputs:
+#     - templateName: structured-swift5
+#       output: Netflix-clone/CodeGenerated/strings.swift
+# xcassets:
+#   inputs: Netflix-clone/Assets.xcassets
+#   outputs:
+#     - templateName: swift5
+#       output: Netflix-clone/CodeGenerated/AssetsImages.swift
+ib:
+  inputs: Netflix Clone/Controllers
+  outputs:
+    - templateName: scenes-swift5
+      output: Netflix Clone/CodeGenerated/StoryboardScenes.swift
+    - templateName: segues-swift5
+      output: Netflix Clone/CodeGenerated/StoryboardSegues.swift
+# colors:
+#   inputs: Color/180517_SK.clr
+#   outputs:
+#     - templateName: swift5
+#       output: Netflix-clone/CodeGenerated/Colors.swift
+
