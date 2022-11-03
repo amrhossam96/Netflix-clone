@@ -108,8 +108,8 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
             switch result {
             case .success(let videoElement):
                 DispatchQueue.main.async {
-                    let vc = TitlePreviewViewController()
-                    vc.configure(with: TitlePreviewViewModel(title: titleName, youtubeView: videoElement, titleOverview: title.overview ?? ""))
+                    let vc = StoryboardScene.TitlePreviewViewController.initialScene.instantiate()
+                    vc.viewModel = TitlePreviewViewModel(title: titleName, youtubeView: videoElement, titleOverview: title.overview ?? "")
                     self?.navigationController?.pushViewController(vc, animated: true)
                 }
 
@@ -152,8 +152,8 @@ extension SearchViewController: UISearchResultsUpdating, SearchResultsViewContro
     func searchResultsViewControllerDidTapItem(_ viewModel: TitlePreviewViewModel) {
         
         DispatchQueue.main.async { [weak self] in
-            let vc = TitlePreviewViewController()
-            vc.configure(with: viewModel)
+            let vc = StoryboardScene.TitlePreviewViewController.initialScene.instantiate()
+            vc.viewModel = viewModel
             self?.navigationController?.pushViewController(vc, animated: true)
         }
     }

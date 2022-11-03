@@ -21,25 +21,6 @@ class TitlePreviewViewController: UIViewController {
     }
     @IBOutlet weak var webView: WKWebView!
 
-//    private let downloadButton: UIButton = {
-//
-//        let button = UIButton()
-//        button.translatesAutoresizingMaskIntoConstraints = false
-//        button.backgroundColor = .red
-//        button.setTitle("Download", for: .normal)
-//        button.setTitleColor(.white, for: .normal)
-//        button.layer.cornerRadius = 8
-//        button.layer.masksToBounds = true
-//
-//        return button
-//    }()
-    
-//    private let webView: WKWebView = {
-//        let webView = WKWebView()
-//        webView.translatesAutoresizingMaskIntoConstraints = false
-//        return webView
-//    }()
-
     var viewModel: TitlePreviewViewModel?
 
     override func viewDidLoad() {

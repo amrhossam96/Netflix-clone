@@ -32,6 +32,8 @@
 		0AE30378277F600E00CBC18F /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE30377277F600E00CBC18F /* SearchResultsViewController.swift */; };
 		0AF8A46B2787BC2100FFE877 /* TitlePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8A46A2787BC2100FFE877 /* TitlePreviewViewController.swift */; };
 		0AF8A46D2787BEA400FFE877 /* TitlePreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8A46C2787BEA400FFE877 /* TitlePreviewViewModel.swift */; };
+		7127135629140D490011FB80 /* StoryboardSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7127135429140D490011FB80 /* StoryboardSegues.swift */; };
+		7127135729140D490011FB80 /* StoryboardScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7127135529140D490011FB80 /* StoryboardScenes.swift */; };
 		71B111A62913E982000DD16C /* TitlePreviewViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71B111A52913E982000DD16C /* TitlePreviewViewController.storyboard */; };
 		D4D16ED0913056A4CF424592 /* Pods_Netflix_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43935CE2F8DBE0643BDFFB90 /* Pods_Netflix_Clone.framework */; };
 /* End PBXBuildFile section */
@@ -62,9 +64,11 @@
 		0AE30377277F600E00CBC18F /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		0AF8A46A2787BC2100FFE877 /* TitlePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewController.swift; sourceTree = "<group>"; };
 		0AF8A46C2787BEA400FFE877 /* TitlePreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewModel.swift; sourceTree = "<group>"; };
-		71B111A52913E982000DD16C /* TitlePreviewViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TitlePreviewViewController.storyboard; sourceTree = "<group>"; };
 		2C5DE074D8C5D9BB260CE9BC /* Pods-Netflix Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netflix Clone.release.xcconfig"; path = "Target Support Files/Pods-Netflix Clone/Pods-Netflix Clone.release.xcconfig"; sourceTree = "<group>"; };
 		43935CE2F8DBE0643BDFFB90 /* Pods_Netflix_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Netflix_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7127135429140D490011FB80 /* StoryboardSegues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardSegues.swift; sourceTree = "<group>"; };
+		7127135529140D490011FB80 /* StoryboardScenes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardScenes.swift; sourceTree = "<group>"; };
+		71B111A52913E982000DD16C /* TitlePreviewViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TitlePreviewViewController.storyboard; sourceTree = "<group>"; };
 		BFDA06AABD39E9A16860212F /* Pods-Netflix Clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Netflix Clone.debug.xcconfig"; path = "Target Support Files/Pods-Netflix Clone/Pods-Netflix Clone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +155,7 @@
 		0A6209A52734603E00A88D71 /* Netflix Clone */ = {
 			isa = PBXGroup;
 			children = (
+				7127135329140D490011FB80 /* CodeGenerated */,
 				0A1942CE274A61C600B3FA93 /* Managers */,
 				0A1942CD274A61C000B3FA93 /* Resources */,
 				0A1942CC274A61A100B3FA93 /* Models */,
@@ -203,6 +208,15 @@
 				2C5DE074D8C5D9BB260CE9BC /* Pods-Netflix Clone.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		7127135329140D490011FB80 /* CodeGenerated */ = {
+			isa = PBXGroup;
+			children = (
+				7127135429140D490011FB80 /* StoryboardSegues.swift */,
+				7127135529140D490011FB80 /* StoryboardScenes.swift */,
+			);
+			path = CodeGenerated;
 			sourceTree = "<group>";
 		};
 		C16077ABC2D7039B0D6FB170 /* Frameworks */ = {
@@ -348,6 +362,7 @@
 				0A6209C2273461A800A88D71 /* DownloadsViewController.swift in Sources */,
 				0A6209A72734603E00A88D71 /* AppDelegate.swift in Sources */,
 				0AE30378277F600E00CBC18F /* SearchResultsViewController.swift in Sources */,
+				7127135629140D490011FB80 /* StoryboardSegues.swift in Sources */,
 				0A5AAA9D2769057B00149719 /* Extensions.swift in Sources */,
 				0AD8A1BE2786FDB000612F1E /* YoutubeSearchResponse.swift in Sources */,
 				0A6209A92734603E00A88D71 /* SceneDelegate.swift in Sources */,
@@ -355,6 +370,7 @@
 				0A6209BE2734617600A88D71 /* UpcomingViewController.swift in Sources */,
 				0AF8A46B2787BC2100FFE877 /* TitlePreviewViewController.swift in Sources */,
 				0AD9A10427604E4D00131EEF /* Title.swift in Sources */,
+				7127135729140D490011FB80 /* StoryboardScenes.swift in Sources */,
 				0A6209BC2734615B00A88D71 /* HomeViewController.swift in Sources */,
 				0A7C94D72776507A0072AE85 /* TitleViewModel.swift in Sources */,
 			);

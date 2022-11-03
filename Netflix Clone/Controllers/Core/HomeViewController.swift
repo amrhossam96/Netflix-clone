@@ -197,11 +197,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 extension HomeViewController: CollectionViewTableViewCellDelegate {
     func collectionViewTableViewCellDidTapCell(_ cell: CollectionViewTableViewCell, viewModel: TitlePreviewViewModel) {
         DispatchQueue.main.async { [weak self] in
-            //let vc = TitlePreviewViewController()
-            let storyboard = UIStoryboard(name: "TitlePreviewViewController", bundle: nil)
-            let vc = storyboard.instantiateInitialViewController() as! TitlePreviewViewController
+            let vc = StoryboardScene.TitlePreviewViewController.initialScene.instantiate()
             vc.viewModel = viewModel
-            // vc.configure(with: viewModel)
             self?.navigationController?.pushViewController(vc, animated: true)
         }
     }
