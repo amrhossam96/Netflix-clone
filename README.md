@@ -32,9 +32,9 @@ $ bundle exec pod install
 
 XcodeからNetflix Clone.xcworkspaceを開き、ビルド
 
+### シミュレーターから起動
 
-Xcodeシミュレーターで動作させる場合、Dark Modeを設定する
-
+Dark Modeを設定する
 設定　-> デベロッパ -> Appearance -> Dark Appearance
 
 ## 使用技術
