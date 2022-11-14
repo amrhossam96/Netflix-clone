@@ -14,20 +14,24 @@ Netflixライクな映画検索アプリです。
 ### Rubyのインストール
 
 ```
-$ brew install rbenv
-$ rbenv install 2.7.1
+brew install rbenv
 ```
+
+```
+rbenv install 2.7.1
+```
+
 
 ### CocoaPodのインストール
 
 ```
-$ bundle install
+bundle install
 ```
 
 ### CoccoaPod管理のパッケージインストール
 
 ```
-$ bundle exec pod install
+bundle exec pod install
 ```
 
 ### ビルド
